@@ -1,0 +1,14 @@
+qx-css-jrcd:
+  admin:
+    settings:
+      enabled: Enable holiday banner
+      enabled_help: "Enable/disable the holiday banner feature"
+      holiday_mode: Banner mode
+      holiday_mode_help: "Choose how the banner should be displayed"
+      custom_banner: Custom banner content
+      custom_banner_help: "HTML content for custom banner (used when mode is 'custom')"
+      custom_style: Custom CSS style
+      custom_style_help: "Custom CSS styles for the banner"
+  forum:
+    banner:
+      default_message: "Welcome! Have a wonderful day!"

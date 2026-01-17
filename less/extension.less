@@ -1,0 +1,100 @@
+// 节日横幅基本样式
+.jrcd-banner {
+    position: relative;
+    z-index: 1000;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: banner-fade-in 0.5s ease-out;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: underline;
+        font-weight: bold;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+// 动画效果
+@keyframes banner-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+    .jrcd-banner {
+        font-size: 14px;
+        padding: 12px 15px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+}
+
+// 节日彩带效果
+.jrcd-ribbon {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 999;
+    pointer-events: none;
+    
+    &.christmas {
+        background: repeating-linear-gradient(
+            45deg,
+            #d32f2f 0px,
+            #d32f2f 10px,
+            #388e3c 10px,
+            #388e3c 20px
+        );
+    }
+    
+    &.newyear {
+        background: repeating-linear-gradient(
+            90deg,
+            #ff6b6b 0px,
+            #ff6b6b 15px,
+            #4ecdc4 15px,
+            #4ecdc4 30px,
+            #45b7d1 30px,
+            #45b7d1 45px
+        );
+        animation: ribbon-shimmer 3s infinite;
+    }
+    
+    &.spring {
+        background: repeating-linear-gradient(
+            -45deg,
+            #d32f2f 0px,
+            #d32f2f 12px,
+            #ffd700 12px,
+            #ffd700 24px
+        );
+    }
+}
+
+@keyframes ribbon-shimmer {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
