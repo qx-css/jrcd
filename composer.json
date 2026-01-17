@@ -3,7 +3,7 @@
     "description": "节日彩带横幅扩展",
     "type": "flarum-extension",
     "keywords": ["banner", "holiday", "ribbon", "custom"],
-    "version": "1.0.1",
+    "version": "2.0.0",
     "license": "MIT",
     "authors": [
         {
