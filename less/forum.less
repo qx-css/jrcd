@@ -1,0 +1,122 @@
+// 基本横幅样式
+.jrcd-banner {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    
+    // 节日主题
+    &.christmas {
+        background: linear-gradient(45deg, #d32f2f, #388e3c);
+        color: white;
+        border: 3px dashed #ffd54f;
+        
+        &:before {
+            content: '🎄';
+            margin-right: 10px;
+        }
+        
+        &:after {
+            content: '🎅';
+            margin-left: 10px;
+        }
+    }
+    
+    &.newyear {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+        color: white;
+        animation: newyear-shine 2s infinite;
+        
+        &:before {
+            content: '🎊';
+            margin-right: 10px;
+        }
+        
+        &:after {
+            content: '🎉';
+            margin-left: 10px;
+        }
+    }
+    
+    &.spring {
+        background: linear-gradient(45deg, #d32f2f, #f57c00);
+        color: #ffd700;
+        font-family: "Microsoft YaHei", sans-serif;
+        
+        &:before {
+            content: '🏮';
+            margin-right: 10px;
+        }
+        
+        &:after {
+            content: '🧧';
+            margin-left: 10px;
+        }
+    }
+    
+    &.valentine {
+        background: linear-gradient(45deg, #e91e63, #f48fb1);
+        color: white;
+        border: 2px solid #ff4081;
+        
+        &:before {
+            content: '💖';
+            margin-right: 10px;
+        }
+        
+        &:after {
+            content: '🌹';
+            margin-left: 10px;
+        }
+    }
+    
+    &.halloween {
+        background: linear-gradient(45deg, #8e24aa, #ff9800);
+        color: #ffeb3b;
+        font-weight: bold;
+        
+        &:before {
+            content: '🎃';
+            margin-right: 10px;
+        }
+        
+        &:after {
+            content: '👻';
+            margin-left: 10px;
+        }
+    }
+    
+    // 默认样式
+    &.default {
+        background: linear-gradient(45deg, #2196f3, #21cbf3);
+        color: white;
+    }
+}
+
+// 动画
+@keyframes newyear-shine {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+}
+
+// 响应式
+@media (max-width: 768px) {
+    .jrcd-banner {
+        font-size: 14px;
+        padding: 12px 15px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+}

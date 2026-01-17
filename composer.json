@@ -1,8 +1,9 @@
 {
     "name": "qx-css/jrcd",
-    "description": "节日彩带横幅扩展 - 根据节日显示不同的彩带横幅，支持自定义内容",
+    "description": "节日彩带横幅扩展",
     "type": "flarum-extension",
     "keywords": ["banner", "holiday", "ribbon", "custom"],
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -10,11 +11,6 @@
             "email": "admin@qxmali.frii.site"
         }
     ],
-    "support": {
-        "email": "admin@qxmali.frii.site",
-        "issues": "https://github.com/qx-css/jrcd/issues",
-        "source": "https://github.com/qx-css/jrcd"
-    },
     "require": {
         "flarum/core": "^1.0"
     },
@@ -26,14 +22,12 @@
     "extra": {
         "flarum-extension": {
             "title": "节日彩带横幅",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-ribbon",
                 "backgroundColor": "#e74c3c",
                 "color": "#fff"
             }
-        },
-        "flagrow": {
-            "discuss": ""
         }
     }
 }
